@@ -89,10 +89,12 @@ button {
 }
 
 /* ==================Navigation================== */
+
 .header-nav {
   display: flex;
   align-items: center;
 }
+
 /* ==================Logo================== */
 
 .header-logo {
@@ -117,10 +119,6 @@ button {
   display: flex;
   gap: 40px;
 }
-
-/* .nav-list-item {
-  position: relative;
-} */
 
 .nav-list-link {
   position: relative;
@@ -162,6 +160,7 @@ button {
 .header-address {
   font-style: normal;
 }
+
 .header-address-list {
   display: flex;
   gap: 40px;
@@ -470,6 +469,8 @@ button {
   align-items: baseline;
 }
 
+/* ==================Footer Logo================== */
+
 .footer-logo-box {
   margin-right: 120px;
 }
@@ -496,6 +497,13 @@ button {
   letter-spacing: 0.02em;
   color: var(--cloud-color);
   max-width: 264px;
+}
+
+/* ==================End Footer Logo================== */
+/* ==================Footer Social Media================== */
+
+.footer-social-box {
+  margin-right: 80px;
 }
 
 .social-text {
@@ -539,6 +547,79 @@ button {
   fill: var(--cloud-color);
 }
 
+/* ==================End Footer Social Media================== */
+/* ==================Footer Subscribe================== */
+
+.subscribe-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.subscribe-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subscribe-form-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white-color);
+}
+
+.subscribe-form-email {
+  width: 264px;
+  height: 40px;
+  border: 1px solid var(--white-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 8px 16px;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+}
+
+.subscribe-form-email::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+}
+
+.subscribe-btn {
+  width: 165px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+  background-color: var(--iris-color);
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-btn-icon {
+  fill: var(--white-color);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--ocean-color);
+}
+
+/* ==================End Footer Subscribe================== */
 /* ==================End Footer================== */
 /* ==================Modal window================== */
 
@@ -572,7 +653,9 @@ button {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px;
 }
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.8);
 }
@@ -609,6 +692,158 @@ button {
   fill: var(--navy-blue-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.modal-form-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue-color);
+  margin: 0 auto 16px;
+}
+
+.modal-form {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-field {
+  margin-bottom: 8px;
+}
+
+.modal-form-field:nth-child(4) {
+  margin-bottom: 16px;
+}
+
+.modal-form-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate-color);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-form-box {
+  display: block;
+  position: relative;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 4px;
+  padding-left: 38px;
+  color: var(--navy-blue-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  fill: var(--navy-blue-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--iris-color);
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--iris-color);
+}
+
+.comment {
+  height: 120px;
+  resize: none;
+  padding: 8px 16px;
+}
+
+.comment::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--navy-blue-modal);
+}
+
+.modal-form-check {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate-color);
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-form-check::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-check:checked + .modal-form-check::before {
+  background-color: var(--ocean-color);
+  border-color: var(--ocean-color);
+  background-image: url(../images/vector.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.policy-check:focus + .modal-form-check::before {
+  border-color: var(--ocean-color);
+}
+
+.policy-link {
+  line-height: 1.33;
+  text-decoration-line: underline;
+  color: var(--iris-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-link:hover,
+.policy-link:focus {
+  color: var(--ocean-color);
+}
+
+.send-btn {
+  width: 169px;
+  height: 56px;
+  background-color: var(--iris-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.send-btn:hover,
+.send-btn:focus {
+  background-color: var(--ocean-color);
+}
+
 /* ==================End Modal window================== */
 /* ==================Portfolio================== */
 
@@ -699,6 +934,7 @@ button {
   transform: translatey(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .portfolio-info {
   padding: 32px 16px;
   border: 1px solid var(--cornflower-color);
