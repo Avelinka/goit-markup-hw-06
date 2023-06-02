@@ -551,7 +551,6 @@ button {
 /* ==================Footer Subscribe================== */
 
 .subscribe-text {
-  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -562,15 +561,8 @@ button {
 
 .subscribe-form {
   display: flex;
-  align-items: flex-end;
   gap: 24px;
 }
-
-/* .subscribe-form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-} */
 
 .subscribe-form-email {
   width: 264px;
@@ -600,7 +592,6 @@ button {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  /* text-align: center; */
   letter-spacing: 0.04em;
   color: var(--white-color);
   background-color: var(--iris-color);
