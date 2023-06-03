@@ -694,21 +694,11 @@ button {
   margin: 0 auto 16px;
 }
 
-.modal-form {
-  width: 360px;
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-form-field {
+.modal-form-box {
   margin-bottom: 8px;
 }
 
-.modal-form-field:nth-child(4) {
-  margin-bottom: 16px;
-}
-
-.modal-form-text {
+.modal-form-field {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -718,7 +708,6 @@ button {
 }
 
 .modal-form-box {
-  display: block;
   position: relative;
 }
 
@@ -727,22 +716,23 @@ button {
   height: 40px;
   border: 1px solid var(--navy-blue-modal);
   border-radius: 4px;
+  background-color: transparent;
   padding-left: 38px;
+  outline: transparent;
   color: var(--navy-blue-color);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-icon {
   position: absolute;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  left: 16px;
   fill: var(--navy-blue-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus {
-  outline: none;
   border-color: var(--iris-color);
 }
 
@@ -750,17 +740,36 @@ button {
   fill: var(--iris-color);
 }
 
-.comment {
-  height: 120px;
-  resize: none;
-  padding: 8px 16px;
+.modal-form-comment {
+  margin-bottom: 16px;
 }
 
-.comment::placeholder {
+.comment {
+  width: 100%;
+  height: 120px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--navy-blue-modal);
+  border: 1px solid rgba(46, 47, 66, 0.2);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment:focus {
+  border-color: var(--iris-color);
+}
+
+/* .comment::placeholder {
+  color: var(--navy-blue-modal);
+} */
+
+.modal-form-check {
+  margin-bottom: 24px;
 }
 
 .modal-form-check {
@@ -768,64 +777,57 @@ button {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--light-slate-color);
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
 }
 
-.modal-form-check::before {
-  content: "";
-  display: block;
+.privacy-check {
   width: 16px;
   height: 16px;
   border: 1px solid var(--navy-blue-modal);
   border-radius: 2px;
-  cursor: pointer;
-  margin-right: 8px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  margin-right: 8px;
 }
 
-.policy-check:checked + .modal-form-check::before {
+.user-privacy-check:checked + .modal-form-check .privacy-check {
   background-color: var(--ocean-color);
-  border-color: var(--ocean-color);
-  background-image: url(../images/vector.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  border: none;
+  fill: var(--white-color);
 }
 
-.policy-check:focus + .modal-form-check::before {
+.user-privacy-check:focus + .modal-form-check .privacy-check {
   border-color: var(--ocean-color);
 }
 
-.policy-link {
-  line-height: 1.33;
-  text-decoration-line: underline;
+.privacy-link {
   color: var(--iris-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.policy-link:hover,
-.policy-link:focus {
+.privacy-link:hover,
+.privacy-link:focus {
   color: var(--ocean-color);
 }
 
 .send-btn {
-  width: 169px;
+  display: block;
+  min-width: 169px;
   height: 56px;
-  background-color: var(--iris-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
   letter-spacing: 0.04em;
   color: var(--white-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--iris-color);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
