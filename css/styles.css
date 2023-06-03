@@ -591,7 +591,7 @@ button {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 2;
   letter-spacing: 0.04em;
   color: var(--white-color);
   background-color: var(--iris-color);
@@ -751,7 +751,7 @@ button {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--navy-blue-modal);
-  border: 1px solid rgba(46, 47, 66, 0.2);
+  border: 1px solid var(--navy-blue-modal);
   border-radius: 4px;
   background-color: transparent;
   padding: 8px 16px;
@@ -764,11 +764,11 @@ button {
   border-color: var(--iris-color);
 }
 
-/* .comment::placeholder {
+.comment::placeholder {
   color: var(--navy-blue-modal);
-} */
+}
 
-.modal-form-check {
+.modal-form-checkbox {
   margin-bottom: 24px;
 }
 
@@ -797,7 +797,7 @@ button {
 .user-privacy-check:checked + .modal-form-check .privacy-check {
   background-color: var(--ocean-color);
   border: none;
-  fill: var(--white-color);
+  fill: var(--cloud-color);
 }
 
 .user-privacy-check:focus + .modal-form-check .privacy-check {
